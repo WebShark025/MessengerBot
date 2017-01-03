@@ -8,7 +8,9 @@ SUPPORT_GP = 1001089563920 # MAIN SUPPORT GROUP FOR ALL PMS TO GET FORWARDED.(su
 CHANNEL_LINK = 'https://telegram.me/webshark25'
 
 enabled_plugins = [
-"start",
+"message_handler",
+"callback_handler",
+"banhammer",
 ]
 
 # END OF CONFIG
