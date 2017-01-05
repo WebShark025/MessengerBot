@@ -3,7 +3,7 @@ def ban_user(message):
   userlang = redisserver.hget("messenger:settings:userlanguage", message.from_user.id)
   if message.from_user.id in ADMINS_IDS:
     if len(message.text.split()) < 2:
-      if message.reply_to_message && message.reply_to_message.forward_from:
+      if message.reply_to_message and message.reply_to_message.forward_from:
         userid = message.reply_to_message.forward_from.id
         redisserver.sadd('messenger_banlist', int(userid))
         bot.send_message(int(userid), language[userlang]["BANNED_MSG"], parse_mode="Markdown")
