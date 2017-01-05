@@ -9,11 +9,11 @@ def callback_inline(call):
       msgid = call.inline_message_id
       bot.edit_message_text(inline_message_id=msgid, chat_id=call.message.chat.id, message_id=call.message.message_id, text="Loading...")
       tm.sleep(2)
-      bot.edit_message_text(inline_message_id=msgid, chat_id=call.message.chat.id, message_id=call.message.message_id, text=language[userlang]["START_MSG"], parse_mode="Markdown")
+      bot.edit_message_text(inline_message_id=msgid, chat_id=call.message.chat.id, message_id=call.message.message_id, text=language["en"]["START_MSG"], parse_mode="Markdown")
     if call.data == "settingslangfa":
       redisserver.hset("messenger:settings:userlanguage", call.from_user.id, "fa")
       msgid = call.inline_message_id
       bot.edit_message_text(inline_message_id=msgid, chat_id=call.message.chat.id, message_id=call.message.message_id, text="Loading...")
       tm.sleep(2)
-      bot.edit_message_text(inline_message_id=msgid, chat_id=call.message.chat.id, message_id=call.message.message_id, text=language[userlang]["START_MSG"], parse_mode="Markdown")
+      bot.edit_message_text(inline_message_id=msgid, chat_id=call.message.chat.id, message_id=call.message.message_id, text=language["fa"]["START_MSG"], parse_mode="Markdown")
 
